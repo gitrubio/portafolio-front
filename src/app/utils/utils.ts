@@ -1,0 +1,1 @@
+export const cleanNav = { primary : '', aboutMe : '' , projects : '', skills : ''}

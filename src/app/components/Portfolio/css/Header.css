@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    background-color: transparent;
+    height: 10vh;
+    width: 102%;
+}
+.header h3 {
+    margin: 10px 20px;
+}
+.links {
+    display: flex;
+    margin: 10px 20%;
+}
+
+.links li {
+    margin: 0px 10px;
+}
