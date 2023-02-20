@@ -1,28 +1,52 @@
-import React, { useEffect, useState } from "react";
-import logo_ligth from "../assets/beach.svg";
-import { motion , useAnimationControls } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import { ISection } from "../../../interfaces/Portfolio.interface";
 
-export default function Primary({ img }: ISection) {
-
+export default function Primary({ img , theme }: ISection) {
   return (
     <section id="primary">
-      <h2 style={{color : 'white'}}>
-        <p className="name">Carlos</p>
-        <p className="second-name">Rubio</p>
+      <h2  className="section-h2">
+        <motion.div
+          initial={{ x: "-100%" }}
+          whileInView={{ x: "4%" }}
+          transition={{
+            duration: 1.5,
+          }}
+        >
+          <p className={`name ${theme}-second`} >Carlos</p>
+        </motion.div>
+
+        <motion.div
+          initial={{ x: "110%" }}
+          whileInView={{ x: "-0.5%" }}
+          transition={{
+            duration: 1.5,
+          }}
+        >
+          <p className={`second-name `}>Rubio</p>
+        </motion.div>
       </h2>
-      <p>
-        Desarrollador Full-Stack
-        </p>
-      <motion.div className="section-img"
-        initial={{ x: '100%' }}
-        whileInView={{ x: "-15%" }}
+
+      <motion.div
+        className="rol"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          duration: 2,
+        }}
+      >
+        <h2>Full Stack Developer</h2>
+      </motion.div>
+
+      <motion.div
+        className="section-img"
+        initial={{ x: "50%" }}
+        whileInView={{ x: "-10%" }}
         transition={{
           duration: 1.5,
         }}
-         
       >
-        <img src={img} style={{ width: "500px" }} />
+        <img src={img} style={{ maxWidth: "500px" , maxHeight: "400px" }} />
       </motion.div>
     </section>
   );

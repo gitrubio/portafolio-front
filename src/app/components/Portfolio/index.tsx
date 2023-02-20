@@ -1,6 +1,6 @@
 import React, { useRef ,useEffect} from "react";
 import "./css/Portfolio.css";
-import logo from "./assets/beach.svg";
+import logo from "./assets/develop.svg";
 import moon from "./assets/goMoon.svg";
 import Primary from "./views/Presentation";
 import { motion } from "framer-motion";
@@ -14,7 +14,7 @@ export default function Portfolio( {theme} : IPortfolio) {
   
   return (
     <motion.div className={`container ${theme}`}>
-      <Primary img={theme === 'theme-light' ? logo : moon}/>
+      <Primary theme={theme} img={theme === 'theme-light' ? logo : moon}/>
       <section id="aboutMe">
         <h2>Section 2</h2>
         <p>

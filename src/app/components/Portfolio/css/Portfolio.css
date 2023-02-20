@@ -1,14 +1,16 @@
+/*globales*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
 }
-
+/*----------------------*/
 .second-name {
     margin: 0px 30px 0px;
 }
 
+/* estilos principales para las secciones*/
 .container {
     height: 100vh;
     width: 102%;
@@ -23,7 +25,14 @@
 }
 
 .theme-light {
-    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+   color: white;
+   background-image: url("../assets/ligth.jpg");
+   background-size: 300vh;
+   background-repeat: no-repeat;
+}
+
+.theme-light-second {
+    color : #F79148
 }
 
 section {
@@ -41,21 +50,31 @@ section h2 {
     padding: 0 40px;
 }
 
+
+/*----------------------*/
+
+/* estilos para celular*/
 @media screen and (max-width : 1200px) {
     section {
         flex-direction: column;
     }
-    section p {
-        overflow-y: hidden;
-    }
-    section h2 {
+
+    .section-h2 {
         overflow-y: hidden;
         margin-top: 5vh;
+        align-items: center;
+        
     }
-
+    .rol {
+        overflow-y: hidden;
+        margin-top: 5vh;
+        text-align: center;
+    }
+    
     .section-img {
         overflow-y: hidden;
         scale: 70%;
         margin: auto;
     }
+    
 }

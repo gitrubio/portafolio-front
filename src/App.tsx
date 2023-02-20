@@ -8,7 +8,7 @@ function App() {
     settheme(theme === 'theme-light' ? 'theme-dark' : 'theme-light')
   }
   return (<>
-    <Header changeTheme={changeTheme}/>
+    <Header changeTheme={changeTheme} theme={theme}/>
     <Portfolio theme={theme}/>  
   </>)
 }

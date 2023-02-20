@@ -2,7 +2,7 @@
 .header{
     display: flex;
     position: fixed;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: transparent;
     height: 13vh;
     width: 102%;
@@ -27,13 +27,18 @@
     margin-top: 10px;
     margin-right: 20px;
 }
+
+.btn-login{
+    left: 0;
+    position: fixed;
+}
 /*switch seccion*/
 .theme-icon{
     margin: 5px;
 }
 .switch {
     width: 60px;
-    height: 40px;
+    height: 35px;
     background-color: rgba(255, 255, 255, 0.4);
     display: flex;
     justify-content: flex-start;
@@ -54,13 +59,10 @@
   }
 /*---- fin de seccion ----*/
   @media screen and (max-width : 1200px) {
-    .header{
-        justify-content: flex-start;
+    .links {
+        display: none;
     }
   }
 
   @media screen and (max-width : 500px) {
-    .links {
-        display: none;
-    }
   }
