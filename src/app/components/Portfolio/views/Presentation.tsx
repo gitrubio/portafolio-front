@@ -1,18 +1,29 @@
-import React from "react";
-import logo from "../assets/portfolio.svg";
+import React, { useEffect, useState } from "react";
+import logo_ligth from "../assets/beach.svg";
+import { motion , useAnimationControls } from "framer-motion";
+import { ISection } from "../../../interfaces/Portfolio.interface";
 
-export default function Primary() {
+export default function Primary({ img }: ISection) {
+
   return (
     <section id="primary">
-      <h2>
+      <h2 style={{color : 'white'}}>
         <p className="name">Carlos</p>
         <p className="second-name">Rubio</p>
       </h2>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis aliquid
-      </p>
-      <a href="">Section 2</a>
-      <img src={logo} alt="" />
+        Desarrollador Full-Stack
+        </p>
+      <motion.div className="section-img"
+        initial={{ x: '100%' }}
+        whileInView={{ x: "-15%" }}
+        transition={{
+          duration: 1.5,
+        }}
+         
+      >
+        <img src={img} style={{ width: "500px" }} />
+      </motion.div>
     </section>
   );
 }
