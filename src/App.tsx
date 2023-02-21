@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import './app.css'
 import Portfolio from "./app/components/Portfolio";
 import Header from "./app/components/Header";
 
