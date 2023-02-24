@@ -3,5 +3,5 @@ export interface IPortfolio {
 }
 
 export interface ISection extends IPortfolio {
-    img : string
+    img?: string
 }

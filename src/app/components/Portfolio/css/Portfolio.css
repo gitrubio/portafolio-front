@@ -14,9 +14,11 @@
 .container {
     height: 100vh;
     width: 102%;
-    background-image: url("../assets/ligth.jpg");
     scroll-snap-type: y mandatory;
     font-family: "futura_m";
+    transition-property: background-image;
+    transition-timing-function: ease;
+    transition-duration: .5;
 }
 
 .theme-dark {
@@ -25,6 +27,7 @@
 }
 
 .theme-light {
+   background-image: url("../assets/ligth.jpg");
    color: white;
    background-size: 300vh;
 }

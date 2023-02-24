@@ -14,7 +14,7 @@ export default function Portfolio( {theme} : IPortfolio) {
   return (
     <motion.div className={`container ${theme}`}>
       <Primary theme={theme} img={theme === 'theme-light' ? logo : night}/>
-      <Aboutme/>
+      <Aboutme theme={theme}/>
 
       <section id="skills">
         <h2>Section 3</h2>
