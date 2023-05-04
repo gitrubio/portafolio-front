@@ -14,7 +14,7 @@
 .container {
     height: 100vh;
     width: 102%;
-    scroll-snap-type: y ;
+    scroll-snap-type: y;
     font-family: "futura_m";
     transition-property: background-image;
     transition-timing-function: ease;
@@ -23,7 +23,14 @@
 
 .theme-dark {
     background-image: url("../assets/dark.jpg");
+    color: black;
     background-size: 300vh;
+}
+.theme-dark-color {
+    color: black;
+}
+.theme-light-color {
+    color: white;
 }
 
 .theme-light {

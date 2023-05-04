@@ -21,7 +21,7 @@ export default function Aboutme(props?: ISection) {
               damping: 40,
             }}
           >
-            <motion.img src={props.img} style={{ width: 100 }} />
+            <motion.img src={props.img} style={{ width: 100, borderRadius : 50 }} />
           </motion.div>
         ) : (
           <div></div>
@@ -33,7 +33,7 @@ export default function Aboutme(props?: ISection) {
           className="hello"
           whileHover={{ rotate: [0, 15, 0, 15, 0] }}
           whileInView={{ rotate: [0, 15, 0, 15, 0] }}
-          transition={{ type: "spring", duration: 2 }}
+          transition={{ type: "spring", duration : 3}}
         >
           👋
         </motion.h1>
@@ -47,6 +47,7 @@ export default function Aboutme(props?: ISection) {
           transition={{ type: "spring", duration: 2 }}
         >
           <AnimatedText
+          theme={props?.theme}
             line=" I help designers, agencies and companies bring their ideas to life.
           with the creation of dynamic pages, landing pages, dashboards,
           eCommerce pages, microservices, Rest API."

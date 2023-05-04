@@ -1,11 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import './app.css'
 import Portfolio from "./app/components/Portfolio";
 import Header from "./app/components/Header";
 
 function App() {
   const [theme, setTheme] = useState('theme-light')
-  
   const changeTheme = () => {
     setTheme(theme === 'theme-light' ? 'theme-dark' : 'theme-light')
   
