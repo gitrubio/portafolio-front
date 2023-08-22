@@ -1,0 +1,11 @@
+.cardProject {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .cardProject:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }

@@ -28,20 +28,20 @@ export default function Header({ changeTheme, theme }: IHeader) {
       >
         <img src={Logo} style={{ maxWidth: "50px", maxHeight: "50px" }} />
       </motion.div>
-      <ul className="links">
-        <motion.li
-          whileHover={{ scale: [null, 0.9, 0.7] }}
+      <div className="links">
+        <motion.div
+        whileHover={{ scale: [null, 1.5, 1.4] }}
           transition={{ duration: 0.3 }}
         >
           <AiOutlineLinkedin size={20} />
-        </motion.li>
-        <motion.li
-          whileHover={{ scale: [null, 0.9, 0.7] }}
+        </motion.div>
+        <motion.div
+             whileHover={{ scale: [null, 1.5, 1.4] }}
           transition={{ duration: 0.3 }}
         >
           <AiFillGithub size={20} />
-        </motion.li>
-      </ul>
+        </motion.div>
+      </div>
       <div className="theme-color">
         {!isOn ? (
           <HiOutlineMoon className="theme-icon" size={25} />

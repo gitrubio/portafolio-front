@@ -1,13 +1,12 @@
 import React from "react";
 import { motion } from 'framer-motion';
-
-export default function AnimatedText({line }: {line : string}) {
+import '../Portfolio/css/Portfolio.css'
+export default function AnimatedText({line, theme }: {line : string, theme? : string}) {
   const sentence = {
     hidden: { opacity: 1 },
     visible: {
       opacity: 1,
       transition: {
-        delay: 0.1,
         staggerChildren: 0.03,
       },
     },
@@ -21,14 +20,14 @@ export default function AnimatedText({line }: {line : string}) {
   };
   return (
     <motion.h3
-      className="load-screen--message"
+      className={`load-screen--message `}
       variants={sentence}
       initial="hidden"
       whileInView="visible"
     >
     {line.split("").map((char, index) =>{
         return (
-            <motion.span key={char+"-"+index} variants={letter}>
+            <motion.span className={`${theme}-color`} key={char+"-"+index} variants={letter}>
                 {char}
             </motion.span>
         )

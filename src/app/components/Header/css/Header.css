@@ -1,5 +1,5 @@
 /*seccion header global */
-.header{
+.header {
     display: flex;
     position: fixed;
     justify-content: space-evenly;
@@ -7,19 +7,25 @@
     height: 13vh;
     width: 102%;
 }
+
 .header h3 {
     margin: 10px 20px;
 }
+
 .links {
     display: flex;
-    margin: 10px 20%;
+    position: fixed;
+    overflow-y: hidden;
+    margin: 11px 20%;
+    height: fit-content;
 }
 
-.links li {
+.links div {
     margin: 0px 10px;
 }
+
 /*------fin seccion ------*/
-.theme-color{
+.theme-color {
     right: 0;
     position: fixed;
     display: flex;
@@ -28,14 +34,16 @@
     margin-right: 20px;
 }
 
-.btn-login{
+.btn-login {
     left: 0;
     position: fixed;
 }
+
 /*switch seccion*/
-.theme-icon{
+.theme-icon {
     margin: 5px;
 }
+
 .switch {
     width: 60px;
     height: 35px;
@@ -49,20 +57,21 @@
 
 .switch[data-isOn="true"] {
     justify-content: flex-end;
-  }
-  
+}
+
 .handle {
     width: 15px;
     height: 15px;
     background-color: white;
     border-radius: 40px;
-  }
+}
+
+
 /*---- fin de seccion ----*/
-  @media screen and (max-width : 1200px) {
+@media screen and (max-width : 1200px) {
     .links {
         display: none;
     }
-  }
+}
 
-  @media screen and (max-width : 500px) {
-  }
+@media screen and (max-width : 500px) {}
