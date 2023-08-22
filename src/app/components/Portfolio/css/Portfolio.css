@@ -14,30 +14,35 @@
 .container {
     height: 100vh;
     width: 102%;
-    scroll-snap-type: y;
+    scroll-snap-type: y mandatory;
     font-family: "futura_m";
-    transition-property: background-image;
-    transition-timing-function: ease;
-    transition-duration: .5;
+    transition: all 1.5s ease-in-out;
+    background-size: cover 300px;
+    background-position-x: center;
+    background-image: url("../assets/ligth.jpg");
+    
+    opacity: 100%;
 }
 
 .theme-dark {
-    background-image: url("../assets/dark.jpg");
+    background-position-y: top;
     color: black;
-    background-size: 300vh;
+    
 }
+.theme-light {
+    color: white;
+    background-position-y: 80%;
+ }
 .theme-dark-color {
+    transition: all 1.5s ease-in-out;
     color: black;
 }
 .theme-light-color {
+    transition: all 1.5s ease-in-out;
     color: white;
 }
 
-.theme-light {
-   background-image: url("../assets/ligth.jpg");
-   color: white;
-   background-size: 300vh;
-}
+
 
 .theme-light-second {
     color : #F79148
