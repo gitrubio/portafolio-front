@@ -5,7 +5,7 @@ import "../css/skills.css";
 import { SkillsIcons } from "../utils/utils";
 import AnimatedText from "../../animated/AnimatedText";
 import { ISection } from "../../../interfaces/Portfolio.interface";
-import perfect from '../assets/perfectbody.png'
+import perfect from '../../../components/Portfolio/assets/perfectbody.png'
 export default function Work( props : ISection) {
 
   return (
