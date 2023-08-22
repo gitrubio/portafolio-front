@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./css/Header.css";
-import Logo from "../../../assets/logoR.png";
 import { motion } from "framer-motion";
 import { HiMoon, HiOutlineMoon, HiSun } from "react-icons/hi";
 import { AiOutlineLinkedin, AiFillGithub } from "react-icons/ai";
@@ -26,7 +25,7 @@ export default function Header({ changeTheme, theme }: IHeader) {
         whileHover={{ scale: [null, 1.5, 1.4] }}
         transition={{ duration: 0.3 }}
       >
-        <img src={Logo} style={{ maxWidth: "50px", maxHeight: "50px" }} />
+        <img src={"src/assets/logoR.png"} style={{ maxWidth: "50px", maxHeight: "50px" }} />
       </motion.div>
       <div className="links">
         <motion.div
