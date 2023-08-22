@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./css/Header.css";
 import Logo from "../../../assets/logoR.png";
 import { motion } from "framer-motion";
-import { HiMoon, HiOutlineMoon } from "react-icons/hi";
+import { HiMoon, HiOutlineMoon, HiSun } from "react-icons/hi";
 import { AiOutlineLinkedin, AiFillGithub } from "react-icons/ai";
 import { IHeader } from "../../interfaces/Heardes.interfaces";
 
@@ -42,16 +42,15 @@ export default function Header({ changeTheme, theme }: IHeader) {
           <AiFillGithub size={20} />
         </motion.div>
       </div>
-      <div className="theme-color">
+      <motion.div className="theme-color"
+        whileHover={{ scale: [null, 1.5, 1.4] }}
+        transition={{ duration: 0.3 }}>
         {!isOn ? (
-          <HiOutlineMoon className="theme-icon" size={25} />
+          <HiSun className="theme-icon" size={25} onClick={toggleSwitch} />
         ) : (
-          <HiMoon className="theme-icon" size={25} />
+          <HiMoon className="theme-icon" size={25} onClick={toggleSwitch}/>
         )}
-        <div className="switch" data-isOn={isOn} onClick={toggleSwitch}>
-          <motion.div className="handle" layout transition={spring} />
-        </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
