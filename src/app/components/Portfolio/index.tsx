@@ -13,8 +13,8 @@ export default function Portfolio( {theme} : IPortfolio) {
   
   return (
     <motion.div className={`container ${theme}`}>
-      <Aboutme key='Aboutme' theme={theme} img={"src/app/components/Portfolio/assets/yo_prueba.jpeg"}/>
       <Primary key='Primary' theme={theme} img={theme === 'theme-light' ? "src/app/components/Portfolio/assets/develop.svg" : "src/app/components/Portfolio/assets/night.svg"}/>
+      <Aboutme key='Aboutme' theme={theme} img={"src/app/components/Portfolio/assets/yo_prueba.jpeg"}/>
       <Work  key='Work'  theme={theme}/>
       <Projects key={'Projects'}/>
     </motion.div>
