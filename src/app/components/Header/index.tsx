@@ -25,7 +25,7 @@ export default function Header({ changeTheme, theme }: IHeader) {
         whileHover={{ scale: [null, 1.5, 1.4] }}
         transition={{ duration: 0.3 }}
       >
-        <img src={"src/assets/logoR.png"} style={{ maxWidth: "50px", maxHeight: "50px" }} />
+        <img src={"https://firebasestorage.googleapis.com/v0/b/e-comerce-f3c71.appspot.com/o/logoR.png?alt=media&token=ea2115f8-4b9a-4f35-886e-be549f33b444"} style={{ maxWidth: "50px", maxHeight: "50px" }} />
       </motion.div>
       <div className="links">
         <motion.div

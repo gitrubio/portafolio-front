@@ -23,7 +23,7 @@ export default function Work( props : ISection) {
         <motion.div className="card">
           <motion.div className="poster">
             <img
-              src={'src/app/components/Portfolio/assets/perfectbody.png'}
+              src={'https://firebasestorage.googleapis.com/v0/b/e-comerce-f3c71.appspot.com/o/perfectbody.png?alt=media&token=71d4f658-0d11-4cfb-8930-5e200e665bb4'}
               alt="Location Unknown"
             />
           </motion.div>
