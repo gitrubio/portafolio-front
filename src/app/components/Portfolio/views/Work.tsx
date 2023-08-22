@@ -2,10 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import "../css/skills.css";
-import { SkillsIcons } from "../utils/utils";
 import AnimatedText from "../../animated/AnimatedText";
 import { ISection } from "../../../interfaces/Portfolio.interface";
-import perfect from '../../../components/Portfolio/assets/perfectbody.png'
 export default function Work( props : ISection) {
 
   return (
@@ -25,7 +23,7 @@ export default function Work( props : ISection) {
         <motion.div className="card">
           <motion.div className="poster">
             <img
-              src={perfect}
+              src={'src/app/components/Portfolio/assets/perfectbody.png'}
               alt="Location Unknown"
             />
           </motion.div>
