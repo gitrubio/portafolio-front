@@ -1,23 +1,14 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import '../css/Projects.css'
+import React from 'react'
+
 export default function Projects() {
-  const [selectedId, setSelectedId] = useState<string | null>(null);
-    const items = [
-        {
-            id : '1',
-            title : 'cafe',
-            subtitle : 'nose'
-        }
-    ]
   return (
-    <section>
-      {items.map((item) => (
-        <motion.div className="cardProject" key={item.id} layoutId={item.id} onClick={() => setSelectedId(item.id)}>
-          <motion.h5>{item.subtitle}</motion.h5>
-          <motion.h2>{item.title}</motion.h2>
-        </motion.div>
-      ))}
-    </section>
-  );
+    <section id="projects">
+    <h2>Section 4</h2>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis aliquid
+    </p>
+    <a href="">Section 1</a>
+    
+  </section>
+  )
 }
