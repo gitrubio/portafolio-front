@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { HiMoon, HiOutlineMoon, HiSun } from "react-icons/hi";
 import { AiOutlineLinkedin, AiFillGithub } from "react-icons/ai";
 import { IHeader } from "../../interfaces/Heardes.interfaces";
+import useSound from "use-sound";
 
 export default function Header({ changeTheme, theme }: IHeader) {
   const [isOn, setIsOn] = useState(false);
@@ -12,7 +13,6 @@ export default function Header({ changeTheme, theme }: IHeader) {
     setIsOn(!isOn);
     changeTheme();
   };
-
   const spring = {
     type: "spring",
     stiffness: 700,

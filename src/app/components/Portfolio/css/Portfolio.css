@@ -92,5 +92,7 @@ section h2 {
         scale: 70%;
         margin: auto;
     }
-    
+    .container {
+        transition: all 0.5s ease-in-out;
+    }
 }
