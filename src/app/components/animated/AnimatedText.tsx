@@ -20,14 +20,14 @@ export default function AnimatedText({line, theme }: {line : string, theme? : st
   };
   return (
     <motion.h3
-      className={`load-screen--message `}
+    className={`load-screen--message ${theme}`}
       variants={sentence}
       initial="hidden"
       whileInView="visible"
     >
     {line.split("").map((char, index) =>{
         return (
-            <motion.span className={`${theme}-color`} key={char+"-"+index} variants={letter}>
+            <motion.span key={char+"-"+index} variants={letter}>
                 {char}
             </motion.span>
         )
