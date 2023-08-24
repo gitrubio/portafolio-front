@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import "./css/Header.css";
 import { motion } from "framer-motion";
-import { HiMoon, HiOutlineMoon, HiSun } from "react-icons/hi";
+import { HiMoon, HiSun } from "react-icons/hi";
 import { AiOutlineLinkedin, AiFillGithub } from "react-icons/ai";
 import { IHeader } from "../../interfaces/Heardes.interfaces";
 import useSound from "use-sound";
-
+import sound from '../../../sounds/light-switch-81967.mp3'
 export default function Header({ changeTheme, theme }: IHeader) {
   const [isOn, setIsOn] = useState(false);
-
+  const [play] = useSound(sound);
   const toggleSwitch = () => {
+    play()
     setIsOn(!isOn);
     changeTheme();
   };
