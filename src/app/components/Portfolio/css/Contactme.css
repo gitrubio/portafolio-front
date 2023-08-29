@@ -9,14 +9,17 @@
     transition: background 1.5s ease-in-out;
     /* background-color: transparent; */
     justify-content: space-between;
+    
 }
 
 .contactme__info{
     height: 100%;
     width: 50%;
+      
     background-size: cover;
-    background-position-x: center;
-    background-image: url("../assets/ligth.jpg");
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-image: url("../assets/fondoEste.jpeg");
 }
 .contactme__form {
     padding-top: 5px;
@@ -71,34 +74,17 @@ textarea{
     
 }
 .button_contactme{
-  height: 45px; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding-left: 5px;
-  padding-right: 5px;   
-  margin-bottom: 20px; 
-  margin-top: 10px;   
-  text-transform: uppercase;
-  background-color: #27ae61; 
-  border-color: transparent; 
-  border-style: solid; 
-  border-radius: 10px;  
-  width: 310px;   
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
+    overflow: hidden;
 }
-.button_contactme:hover{
-    margin-right: 10px;
-}
+
+
 h1{
     text-align: center;
     font-size: 30px;  
-    padding-bottom: 5px; 
+    padding-bottom: 15px; 
   }
 /* estilos para celular*/
-@media screen and (max-width : 400px) {
+@media screen and (max-width : 500px) {
     .contactme {
         min-height: 700px;
     }
@@ -110,12 +96,55 @@ h1{
         flex-direction: column;
     }
     input{
+        width: 100%;
         margin-bottom: 10px;
     }
     textarea{
-        width: 320px;
+        width: 100%;
     }
     .button_contactme{
         width: 100%;
     }
 }
+
+
+  a{
+    overflow: hidden;
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+
+    border-radius: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+  }
+  
+  a span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  a:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #16408c;
+    transition: all .35s;
+  }
+  
+  a:hover{
+    color: #fff;
+  }
+  
+  a:hover:after{
+    width: 100%;
+  }

@@ -5,7 +5,7 @@ import AnimatedText from "../../animated/AnimatedText";
 import { ISection } from "../../../interfaces/Portfolio.interface";
 
 export default function Aboutme(props?: ISection) {
-  const [rotate, setRotate] = useState(30);
+
 
   return (
     <section>

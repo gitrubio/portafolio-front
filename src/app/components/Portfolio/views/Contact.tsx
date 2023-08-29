@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import "../css/Contactme.css";
 import { IPortfolio } from '../../../interfaces/Portfolio.interface';
 import { AiOutlineSend } from "react-icons/ai";
+import BtnSend from "../components/BtnSend";
 export default function Contact( { theme} :IPortfolio) {
   const [form, setform] = useState({
     name: "",
@@ -18,14 +19,14 @@ export default function Contact( { theme} :IPortfolio) {
       <motion.div className="contactme" style={{ backgroundColor : theme === 'theme-light' ? "white" : "#2c3056" , color: theme === 'theme-light' ? "black" : "white" }}>
         <div className="contactme__info"/>
         <div className="contactme__form">
-        <h1>Contáctame!</h1>
+        <h1> ¡ Contáctame !</h1>
           <div className="form_order">
            <div>
            <label>Nombre</label>
           <input
             type="text"
             name="name"
-            placeholder="Name"
+            placeholder="Jhon"
             onChange={(e) =>
               setform((prev) => ({ ...prev, name: e.target.value }))
             }
@@ -37,7 +38,7 @@ export default function Contact( { theme} :IPortfolio) {
             <input
             type="text"
             name="Last Name"
-            placeholder="last Name"
+            placeholder="Walker"
             onChange={(e) =>
               setform((prev) => ({ ...prev, lastname: e.target.value }))
             }
@@ -51,7 +52,7 @@ export default function Contact( { theme} :IPortfolio) {
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="jhony@gmail.com"
             onChange={(e) =>
               setform((prev) => ({ ...prev, email: e.target.value }))
             }
@@ -63,7 +64,7 @@ export default function Contact( { theme} :IPortfolio) {
           <input
             type="number"
             name="phone number"
-            placeholder="Phone number"
+            placeholder="382902129"
             onChange={(e) =>
               setform((prev) => ({ ...prev, phone: e.target.value }))
             }
@@ -87,7 +88,7 @@ export default function Contact( { theme} :IPortfolio) {
           />
          </div>
             <div className="div_button">
-            <button className="button_contactme">{'Enviar'}<AiOutlineSend/></button>
+              <BtnSend key={'btnSend'} onClick={()=>{}} color={theme === 'theme-light' ? "black" : "white"}/>
             </div>
         </div>
       </motion.div>

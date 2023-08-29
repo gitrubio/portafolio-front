@@ -18,7 +18,7 @@
     width: 102%;
     scroll-snap-type: y mandatory;
     transition: all 1.5s ease-in-out;
-    background-size: cover 300px;
+    background-size: cover 300px ;
     background-position-x: center;
     background-image: url("../assets/ligth.jpg");
 }
