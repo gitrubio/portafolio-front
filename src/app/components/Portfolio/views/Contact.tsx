@@ -4,6 +4,7 @@ import "../css/Contactme.css";
 import { IPortfolio } from '../../../interfaces/Portfolio.interface';
 import { AiOutlineSend } from "react-icons/ai";
 import BtnSend from "../components/BtnSend";
+import { THEME } from "../../../constants/constants";
 export default function Contact( { theme} :IPortfolio) {
   const [form, setform] = useState({
     name: "",
@@ -12,11 +13,9 @@ export default function Contact( { theme} :IPortfolio) {
     email: "",
     information: "",
   });
-  console.log("renderizando");
-
   return (
     <section id="projects">
-      <motion.div className="contactme" style={{ backgroundColor : theme === 'theme-light' ? "white" : "#2c3056" , color: theme === 'theme-light' ? "black" : "white" }}>
+      <motion.div className="contactme" style={{ backgroundColor : theme === 'theme-light' ? "white" : "#2c3056" , color: theme === THEME.LIGHT ? "black" : "white" }}>
         <div className="contactme__info"/>
         <div className="contactme__form">
         <h1> ¡ Contáctame !</h1>
