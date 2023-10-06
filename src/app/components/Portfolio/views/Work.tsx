@@ -2,23 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import "../css/skills.css";
-import AnimatedText from "../../animated/AnimatedText";
 import { ISection } from "../../../interfaces/Portfolio.interface";
 export default function Work( props : ISection) {
 
   return (
     <section className="work">
-      <motion.div
-        key={"titleSkills"}
-        className="title"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: [0.5, 1] }}
-        transition={{
-          duration: 1,
-        }}
-      >
-        <h2>Work Experience</h2>
-      </motion.div> 
       <motion.div className="wrapper">
         <motion.div className="card">
           <motion.div className="poster">

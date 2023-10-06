@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../css/aboutMe.css";
 import { motion } from "framer-motion";
 import AnimatedText from "../../animated/AnimatedText";
@@ -12,7 +12,7 @@ export default function Aboutme(props?: ISection) {
       <div className="aboutMe">
         {props ? (
           <motion.div
-            style={{ width: 200, height: 100, margin: "auto" }}
+            style={{ width: 200, height: 120, margin: "auto", overflowY: 'hidden'}}
             initial={{ scale: 0 }}
             whileInView={{ rotate: 360, scale: 1 }}
             transition={{
@@ -38,7 +38,7 @@ export default function Aboutme(props?: ISection) {
           👋
         </motion.h1>
         <motion.h1 className="text" style={{ textAlign: "center" }}>
-          I'm Carlos Rubio Viloria
+         {"I'm Carlos Rubio Viloria"}
         </motion.h1>
         <motion.div
           className="description"

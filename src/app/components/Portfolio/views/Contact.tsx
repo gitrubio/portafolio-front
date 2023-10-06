@@ -1,96 +1,73 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import "../css/Contactme.css";
-import { IPortfolio } from '../../../interfaces/Portfolio.interface';
-import { AiOutlineSend } from "react-icons/ai";
-import BtnSend from "../components/BtnSend";
-import { THEME } from "../../../constants/constants";
-export default function Contact( { theme} :IPortfolio) {
-  const [form, setform] = useState({
-    name: "",
-    lastname: "",
-    phone: "",
-    email: "",
-    information: "",
-  });
-  return (
-    <section id="projects">
-      <motion.div className="contactme" style={{ backgroundColor : theme === 'theme-light' ? "white" : "#2c3056" , color: theme === THEME.LIGHT ? "black" : "white" }}>
-        <div className="contactme__info"/>
-        <div className="contactme__form">
-        <h1> ¡ Contáctame !</h1>
-          <div className="form_order">
-           <div>
-           <label>Nombre</label>
-          <input
-            type="text"
-            name="name"
-            placeholder="Jhon"
-            onChange={(e) =>
-              setform((prev) => ({ ...prev, name: e.target.value }))
-            }
-            value={form.name}
-          />
-           </div>
-            <div>
-            <label>Apellido</label>
-            <input
-            type="text"
-            name="Last Name"
-            placeholder="Walker"
-            onChange={(e) =>
-              setform((prev) => ({ ...prev, lastname: e.target.value }))
-            }
-            value={form.lastname}
-          />
-            </div>
-          </div>
-          <div className="form_order">
-          <div>
-          <label>Correo</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="jhony@gmail.com"
-            onChange={(e) =>
-              setform((prev) => ({ ...prev, email: e.target.value }))
-            }
-            value={form.email}
-          />
-          </div>
-          <div>
-            <label>Telefono</label>
-          <input
-            type="number"
-            name="phone number"
-            placeholder="382902129"
-            onChange={(e) =>
-              setform((prev) => ({ ...prev, phone: e.target.value }))
-            }
-            value={form.phone}
-          />
-          </div>
-          </div>
+import React from 'react';
+import {
+	Paper,
+	Text,
+	TextInput,
+	Textarea,
+	Button,
+	Group,
+	SimpleGrid,
+} from '@mantine/core';
+import { ContactIconsList } from '../components/ContactIcons';
+import bg from '../assets/bg.svg';
+import classes from '../css/ConctactMe.module.css';
+import { ISection } from '../../../interfaces/Portfolio.interface';
+import { THEME } from '../../../constants/constants';
+
+export default function Contact({theme} : ISection) {
+	return (
+		<section>
+      <Paper shadow='md' radius='lg'>
+			<div className={classes.wrapper} style={{ backgroundColor : theme === THEME.LIGHT ? 'white' : '', color : theme === THEME.LIGHT ? 'black' : 'white' }}>
+				<div
+					className={classes.contacts}
+					style={{ backgroundImage: `url(${bg})` }}
+				>
+					<Text fz='lg' fw={700} className={classes.title} c='#fff'>
+						Contact information
+					</Text>
+
+					<ContactIconsList />
+				</div>
+
+				<form
           
-         <div>
-          <label>Informacion</label>
-         <textarea
-            name="Information"
-            maxLength={200}
-            rows={3}
-            cols={3}
-            placeholder="Information"
-            onChange={(e) =>
-              setform((prev) => ({ ...prev, information: e.target.value }))
-            }
-            value={form.information}
-          />
-         </div>
-            <div className="div_button">
-              <BtnSend key={'btnSend'} onClick={()=>{}} color={theme === 'theme-light' ? "black" : "white"}/>
-            </div>
-        </div>
-      </motion.div>
+					className={classes.form}
+					onSubmit={(event) => event.preventDefault()}
+				>
+					<Text fz='lg' fw={700} className={classes.title}>
+						Get in touch
+					</Text>
+
+					<div className={classes.fields}>
+						<SimpleGrid cols={{ base: 1, sm: 2 }}>
+							<TextInput label='Your name' placeholder='Your name' />
+							<TextInput
+								label='Your email'
+								placeholder='hello@mantine.dev'
+								required
+							/>
+						</SimpleGrid>
+
+						<TextInput mt='md' label='Subject' placeholder='Subject' required />
+
+						<Textarea
+							mt='md'
+							label='Your message'
+							placeholder='Please include all relevant information'
+							minRows={3}
+              
+						/>
+
+						<Group justify='flex-end' mt='md'>
+							<Button type='submit' className={classes.control}>
+								Send message
+							</Button>
+						</Group>
+					</div>
+				</form>
+			</div>
+		</Paper>
     </section>
-  );
+	);
 }

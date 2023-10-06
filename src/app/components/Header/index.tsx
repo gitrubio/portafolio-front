@@ -1,26 +1,25 @@
 import React, { useState } from "react";
-import "./css/Header.css";
 import { motion } from "framer-motion";
 import { HiMoon, HiSun } from "react-icons/hi";
 import { AiOutlineLinkedin, AiFillGithub } from "react-icons/ai";
 import { IHeader } from "../../interfaces/Heardes.interfaces";
 import useSound from "use-sound";
 import sound from '../../../sounds/light-switch-81967.mp3'
-export default function Header({ changeTheme, theme }: IHeader) {
+import "./css/Header.css";
+
+
+export default function Header({ changeTheme }: IHeader) {
   const [isOn, setIsOn] = useState(false);
   const [play] = useSound(sound);
+
   const toggleSwitch = () => {
     play()
     setIsOn(!isOn);
     changeTheme();
   };
-  const spring = {
-    type: "spring",
-    stiffness: 700,
-    damping: 30,
-  };
+
   return (
-    <div className={`header ${theme}`}>
+    <div className={`header`} style={{color: 'white'}}>
       <motion.div
         className="btn-login"
         whileHover={{ scale: [null, 1.5, 1.4] }}
