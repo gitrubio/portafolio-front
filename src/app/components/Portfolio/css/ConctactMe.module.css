@@ -50,8 +50,9 @@
     box-sizing: border-box;
     position: relative;
     border-radius: var(--mantine-radius-lg);
-    background-size: cover;
-    background-position: center;
+    transition: all 1.5s ease-in-out;
+    background-size: cover 1px;
+    background-repeat: no-repeat;
     border: rem(1px) solid transparent;
     padding: var(--mantine-spacing-xl);
     flex: 0 0 rem(280px);
@@ -72,6 +73,7 @@
   }
   
   .control {
+    transition: all 1.5s ease-in-out;
     @media (max-width: $mantine-breakpoint-sm) {
       flex: 1;
     }

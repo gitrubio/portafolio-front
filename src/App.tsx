@@ -14,7 +14,7 @@ function App() {
     defaultRadius: 'md',
   });
 	return (
-    <MantineProvider theme={default_theme} defaultColorScheme='auto'>
+    <MantineProvider theme={default_theme} >
 			<Header changeTheme={changeTheme} theme={theme} />
 			<Portfolio theme={theme} />
 		</MantineProvider>

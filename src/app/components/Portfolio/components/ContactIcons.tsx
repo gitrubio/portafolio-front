@@ -27,13 +27,13 @@ function ContactIcon({ icon: Icon, title, description, ...others }: ContactIconP
 }
 
 const MOCKDATA = [
-  { title: 'Email', description: 'hello@mantine.dev', icon: IconAt },
-  { title: 'Phone', description: '+49 (800) 335 35 35', icon: IconPhone },
-  { title: 'Address', description: '844 Morris Park avenue', icon: IconMapPin },
-  { title: 'Working hours', description: '8 a.m. – 11 p.m.', icon: IconSun },
+  { title: 'Email', description: 'carloviloria0@gmail.co', icon: IconAt },
+  { title: 'Phone', description: '+57 3118890195', icon: IconPhone },
+  { title: 'Address', description: 'Cr 13c #45b-56', icon: IconMapPin },
+  { title: 'Working hours', description: '8 a.m. – 5 p.m.', icon: IconSun },
 ];
 
 export function ContactIconsList() {
   const items = MOCKDATA.map((item, index) => <ContactIcon key={index} {...item} />);
-  return <Stack>{items}</Stack>;
+  return <Stack gap={"xl"}>{items}</Stack>;
 }
