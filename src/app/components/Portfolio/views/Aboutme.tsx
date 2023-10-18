@@ -3,9 +3,9 @@ import "../css/aboutMe.css";
 import { motion } from "framer-motion";
 import AnimatedText from "../../animated/AnimatedText";
 import { ISection } from "../../../interfaces/Portfolio.interface";
+import useAnimateOnView from "../../../hooks/useAnimateOnView";
 
 export default function Aboutme(props?: ISection) {
-
 
   return (
     <section>
@@ -14,7 +14,8 @@ export default function Aboutme(props?: ISection) {
           <motion.div
             style={{ width: 200, height: 120, margin: "auto", overflowY: 'hidden'}}
             initial={{ scale: 0 }}
-            whileInView={{ rotate: 360, scale: 1 }}
+            whileInView={{ rotate: 360, scale: 1}}
+            nonce="#fff"
             transition={{
               type: "spring",
               stiffness: 260,

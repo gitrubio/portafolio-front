@@ -17,7 +17,6 @@ export default function Portfolio( {theme} : IPortfolio) {
     <motion.div className={`container ${theme}`}>
       <Primary key='Primary' theme={theme} img={theme === THEME.LIGHT ? BACK_GROUND.LIGHT : BACK_GROUND.DARK }/>
       <Aboutme key='Aboutme' theme={theme} img={USER_PHOTO}/>
-      <TimeLine  key='Work'  theme={theme}/>
       <Work  key='Work'  theme={theme}/>
       <Contact key={'Contact'} theme={theme}/>
     </motion.div>
