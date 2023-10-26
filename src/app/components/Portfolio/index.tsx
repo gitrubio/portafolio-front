@@ -8,11 +8,9 @@ import Aboutme from "./views/Aboutme";
 import Work from "./views/Work";
 import Contact from "./views/Contact";
 import { BACK_GROUND, THEME, USER_PHOTO } from "../../constants/constants";
-import TimeLine from "./views/TimeLine";
 
 
 export default function Portfolio( {theme} : IPortfolio) {
-  
   return (
     <motion.div className={`container ${theme}`}>
       <Primary key='Primary' theme={theme} img={theme === THEME.LIGHT ? BACK_GROUND.LIGHT : BACK_GROUND.DARK }/>

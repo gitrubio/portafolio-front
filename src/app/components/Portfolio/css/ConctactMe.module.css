@@ -56,7 +56,7 @@
     border: rem(1px) solid transparent;
     padding: var(--mantine-spacing-xl);
     flex: 0 0 rem(280px);
-  
+    overflow: hidden;
     @media (max-width: $mantine-breakpoint-sm) {
       margin-bottom: var(--mantine-spacing-sm);
       padding-left: var(--mantine-spacing-md);

@@ -4,7 +4,11 @@
     text-align: center;
     
 }
-
+.button{
+    overflow-y: hidden;
+    width: fit-content;
+    margin-inline: auto;
+}
 .aboutMe h1 {
     display: inline-flex;
     overflow-y: hidden;

@@ -6,6 +6,17 @@ import { ISection } from '../../../interfaces/Portfolio.interface';
 export default function Work(props: ISection) {
 	return (
 		<section className='work'>
+			<motion.h2
+				className='section-h2'
+				initial={{ opacity: 0, scale: 0 }}
+				whileInView={{ opacity: 1, scale: 1 }}
+				transition={{
+					duration: 0.8,
+					ease: [0, 0.71, 0.2, 1.01],
+				}}
+			>
+				WORK EXPERIENCE
+			</motion.h2>
 			<motion.div className='wrapper'>
 				<motion.div
 					className='card'
@@ -39,12 +50,15 @@ export default function Work(props: ISection) {
 						</p>
 					</motion.div>
 				</motion.div>
-				<motion.div className='card' initial={{ opacity: 0, scale: 0 }}
+				<motion.div
+					className='card'
+					initial={{ opacity: 0, scale: 0 }}
 					whileInView={{ opacity: 1, scale: 1 }}
 					transition={{
 						duration: 0.8,
 						ease: [0, 0.71, 0.2, 1.01],
-					}}>
+					}}
+				>
 					<motion.div className='poster'>
 						<img
 							src='https://firebasestorage.googleapis.com/v0/b/e-comerce-f3c71.appspot.com/o/deviltech.jpg?alt=media&token=26850caf-8bfc-4805-8398-5d04f6200c93&_gl=1*fthiyt*_ga*MTAwNjM3NzgxMC4xNjk3NTk5Mzky*_ga_CW55HF8NVT*MTY5NzU5OTM5MS4xLjEuMTY5NzU5OTQ0MC4xMS4wLjA.'
@@ -64,17 +78,20 @@ export default function Work(props: ISection) {
 							Manejo de base de datos con PostgreSql y MongoDB
 						</p>
 						<p className='desc'>
-							Integracion de nuevos servicios tanto para la web como aplicaciones de
-							escritorio en Node js
+							Integracion de nuevos servicios tanto para la web como
+							aplicaciones de escritorio en Node js
 						</p>
 					</motion.div>
 				</motion.div>
-				<motion.div className='card' initial={{ opacity: 0, scale: 0 }}
+				<motion.div
+					className='card'
+					initial={{ opacity: 0, scale: 0 }}
 					whileInView={{ opacity: 1, scale: 1 }}
 					transition={{
 						duration: 0.8,
 						ease: [0, 0.71, 0.2, 1.01],
-					}}>
+					}}
+				>
 					<motion.div className='poster'>
 						<img
 							src='https://firebasestorage.googleapis.com/v0/b/e-comerce-f3c71.appspot.com/o/mocion.jpg?alt=media&token=d4b1cdec-41fc-45a7-9ec4-8d5163aa2ef7&_gl=1*1l0g3ek*_ga*MTAwNjM3NzgxMC4xNjk3NTk5Mzky*_ga_CW55HF8NVT*MTY5NzU5OTM5MS4xLjEuMTY5NzU5OTUxNC41My4wLjA.'

@@ -20,7 +20,7 @@
     height: fit-content;
 }
 
-.links div {
+.links a {
     margin: 0px 10px;
 }
 
@@ -30,6 +30,13 @@
     position: fixed;
     display: flex;
     align-items: center;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+.btn-cv {
+    right: 40px;
+    position: fixed;
+    display: flex;
     margin-top: 10px;
     margin-right: 20px;
 }

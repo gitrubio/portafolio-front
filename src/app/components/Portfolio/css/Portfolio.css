@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     overflow-x: hidden;
 }
 /*----------------------*/
@@ -15,7 +15,7 @@
 /* estilos principales para las secciones*/
 .container {
     height: 100vh;
-    width: 102%;
+    width: 100%;
     scroll-snap-type: y mandatory;
     transition: all 1.5s ease-in-out;
     background-size: cover 300px ;

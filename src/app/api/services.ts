@@ -1,15 +1,16 @@
 import { AxiosInstance } from 'axios';
 import { DataE } from '../interfaces/Portfolio.interface';
 
+const myEmail = import.meta.env.VITE_PERSONAL_EMAIL as string
 export default class ServicesGeneral {
 	constructor(private readonly Api: AxiosInstance) {}
-
+	 
 	async sendEmail(dataUser: DataE) {
 		try {
 			const { email, message,name,subject} = dataUser
 			const {data} = await this.Api.post('https://email-service-kqug.onrender.com/api/email', {
 				titleFrom: `Hola Carlos, soy ${name} y me interesa tu portafolio`,
-				userTo: 'carloviloria0@gmail.com',
+				userTo: myEmail,
 				userFrom: email,
 				subject,
 				text: message,
@@ -23,4 +24,5 @@ export default class ServicesGeneral {
             return false
         }
 	}
+
 }
