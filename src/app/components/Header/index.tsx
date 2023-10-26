@@ -25,6 +25,7 @@ export default function Header({ changeTheme }: IHeader) {
 				transition={{ duration: 0.3 }}
 			>
 				<img
+					alt='logo'
 					src={
 						'https://firebasestorage.googleapis.com/v0/b/e-comerce-f3c71.appspot.com/o/logoR.png?alt=media&token=ea2115f8-4b9a-4f35-886e-be549f33b444'
 					}
@@ -33,6 +34,8 @@ export default function Header({ changeTheme }: IHeader) {
 			</motion.div>
 			<div className='links'>
 				<motion.a
+					key={'linkedin'}
+					aria-label='linkedin'
 					whileHover={{ scale: [null, 1.5, 1.4] }}
 					transition={{ duration: 0.3 }}
 					href='https://www.linkedin.com/in/carlos-rubio-viloria-27b328237/'
@@ -42,9 +45,11 @@ export default function Header({ changeTheme }: IHeader) {
 					<AiOutlineLinkedin size={20} />
 				</motion.a>
 				<motion.a
+					key={'github'}
 					whileHover={{ scale: [null, 1.5, 1.4] }}
 					transition={{ duration: 0.3 }}
 					href='https://github.com/gitrubio'
+					aria-label='github'
 					target='_blank'
 					style={{ color: 'white' }}
 				>

@@ -46,7 +46,7 @@ export default function Primary({ img , theme }: ISection) {
           duration: 1.5,
         }}
       >
-        <img src={img} style={{ maxWidth: "500px" , maxHeight: "400px" }} />
+        <img alt="Presentation" src={img} style={{ maxWidth: "500px" , maxHeight: "400px" }} />
       </motion.div>
     </section>
   );
