@@ -82,7 +82,7 @@ export default function Contact({ theme }: ISection) {
 						<div
 							className={classes.contacts}
 							style={{
-								backgroundImage: `https://firebasestorage.googleapis.com/v0/b/e-comerce-f3c71.appspot.com/o/fontC.png?alt=media&token=c74e360e-0d94-496c-b475-a57e58d0bb57&_gl=1*peyu4*_ga*MTAwNjM3NzgxMC4xNjk3NTk5Mzky*_ga_CW55HF8NVT*MTY5ODMzOTY3NS4yLjEuMTY5ODM0Mjg2OS4zLjAuMA.`,
+								backgroundImage: `url(${'https://firebasestorage.googleapis.com/v0/b/e-comerce-f3c71.appspot.com/o/fontC.png?alt=media&token=c74e360e-0d94-496c-b475-a57e58d0bb57&_gl=1*peyu4*_ga*MTAwNjM3NzgxMC4xNjk3NTk5Mzky*_ga_CW55HF8NVT*MTY5ODMzOTY3NS4yLjEuMTY5ODM0Mjg2OS4zLjAuMA'})`,
 								backgroundPositionY: theme === THEME.LIGHT ? 'top' : 'bottom',
 							}}
 						>
