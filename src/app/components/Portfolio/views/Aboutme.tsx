@@ -28,6 +28,7 @@ export default function Aboutme(props?: ISection) {
 						}}
 					>
 						<motion.img
+							alt='user'
 							src={props.img}
 							style={{ width: 100, borderRadius: 50 }}
 						/>

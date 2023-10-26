@@ -62,7 +62,7 @@ export default function Work(props: ISection) {
 					<motion.div className='poster'>
 						<img
 							src='https://firebasestorage.googleapis.com/v0/b/e-comerce-f3c71.appspot.com/o/deviltech.jpg?alt=media&token=26850caf-8bfc-4805-8398-5d04f6200c93&_gl=1*fthiyt*_ga*MTAwNjM3NzgxMC4xNjk3NTk5Mzky*_ga_CW55HF8NVT*MTY5NzU5OTM5MS4xLjEuMTY5NzU5OTQ0MC4xMS4wLjA.'
-							alt='Location Unknown'
+							alt='Devitech'
 						/>
 					</motion.div>
 					<motion.div className='details'>
@@ -95,7 +95,7 @@ export default function Work(props: ISection) {
 					<motion.div className='poster'>
 						<img
 							src='https://firebasestorage.googleapis.com/v0/b/e-comerce-f3c71.appspot.com/o/mocion.jpg?alt=media&token=d4b1cdec-41fc-45a7-9ec4-8d5163aa2ef7&_gl=1*1l0g3ek*_ga*MTAwNjM3NzgxMC4xNjk3NTk5Mzky*_ga_CW55HF8NVT*MTY5NzU5OTM5MS4xLjEuMTY5NzU5OTUxNC41My4wLjA.'
-							alt='Location Unknown'
+							alt='Mocion'
 						/>
 					</motion.div>
 					<motion.div className='details'>
